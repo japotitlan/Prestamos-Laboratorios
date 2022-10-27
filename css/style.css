@@ -4,7 +4,8 @@ body{
 }
 
 h1{
-    background-color: palegreen;
+    color: palegreen;
+    background-color: #333;
     margin: 0px;
     text-align: center;
 }
@@ -12,4 +13,9 @@ h1{
 h2{
     text-align: center;
     color: palegreen;
+}
+
+.contenedor{
+    background-color: palegreen;
+    text-align: center;
 }
