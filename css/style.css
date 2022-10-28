@@ -44,3 +44,8 @@ h1{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+/*Esto es pa los bordes en tablas*/
+th, td {
+    padding: 8px;
+    border: 1px solid #000;
+  }
