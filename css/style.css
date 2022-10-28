@@ -1,21 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
 body{
     background-color: #333;
-    margin: 0px;
 }
 
 h1{
     color: palegreen;
-    background-color: #333;
-    margin: 0px;
+    padding: 20px;
     text-align: center;
-}
-
-h2{
-    text-align: center;
-    color: palegreen;
 }
 
 .contenedor{
     background-color: palegreen;
     text-align: center;
+    padding: 20px;
+}
+
+.texto{
+    padding: 10px;
+}
+
+.contenedor button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: palegreen;
+    background-color: #333;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #555;
+}
+  
+.contenedor button:hover {background-color: #777}
+  
+.contenedor button:active {
+    background-color: #333;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
