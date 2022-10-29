@@ -7,42 +7,50 @@
     <title>PrestamosA</title>
 </head>
 <body>
-    <h1 style="color:rgb(26, 26, 123);">PRESTAMO DE HERRAMIENTA/EQUIPO A DOCENTES</h1>
+    <div>
+        <header style="color: white; font-size: 36px; text-align: center; font-family: monospace; background-color: rgb(26, 26, 123); ">
+            TECNM PRESTAMO DE HERRAMIENTA/EQUIPO
+        </header>
+    </div>
+    
     <div style="display: flex;">
         <!-- Left content -->
-        <div style="flex: 1;">
-            <form>
+        <div style="flex: 1; font-family: monospace;">
+            <form style="margin:0px auto; padding-left: 100px;">
                 <h2>Solicitud de Prestamo de Alumnos</h2>
-                <label>Datos del Alumno:</label><br>
-                <input type="number" name="Matricula" placeholder="Matricula del Alumno"><br>
-                <input type="text" name="Alumno" placeholder="Nombre completo"><br>
-                <input type="text" name="Carrera" placeholder="Carrera"><br>
-                <input type="text" name="Semestre" placeholder="Semestre"><br>
-                <input type="tel" name="Tel."placeholder="638-xxx"><br>
+                <label style="font-size: 20px;">Datos del Alumno:</label><br>
+                <label style=" padding-right: 10px; ">Matricula:</label>
+                <input style="margin-bottom: 5px;border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="number" name="Matricula" placeholder="Matricula del Alumno"><br>
+                <label style=" padding-right: 10px; ">Nombre:</label>
+                <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="text" name="Alumno" placeholder="Nombre completo"><br>
+                <label>Carrera:</label>
+                <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="text" name="Carrera" placeholder="Carrera"><br>
+                <label>Semestre:</label>
+                <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="text" name="Semestre" placeholder="Semestre"><br>
+                <label>Telefono:</label>
+                <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="tel" name="Tel."placeholder="638-xxx"><br>
                 <label>Datos de herramienta:</label><br>
-                <input name="idHerramienta" placeholder="Clave de la herramienta">
-                <input type = "number"name="cantidad" placeholder="cantidad"><br>
+                <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" name="idHerramienta" placeholder="Clave de la herramienta">
+                <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type = "number"name="cantidad" placeholder="cantidad"><br>
                 <label>Fecha Prestamo: </label>
-                <input type="date" name="Fecha Prestamo">
+                <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="date" name="Fecha Prestamo">
                 <label>Fecha Devolucion: </label>
-                <input type="date" name="Fecha Devolucion"><br>
+                <input style="border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="date" name="Fecha Devolucion"><br>
         
-                <button>Solicitar</button>
+                <button style="border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;">Solicitar</button>
                 </form>
         </div>
     
         <!-- Right content -->
-        <div style="flex: 1;">
-            <table>
-                <br><br><br>
+        <div style="flex: 1;" style=" text-align: center; ">
+            <h2 style="text-align: center; font-family: monospace; ">Inventario Disponible</h2><br>
+            <table style="text-align: center; margin:0px auto; font-family: monospace;">
               <!--Esta es una fila--> 
               <tr style="padding: 8px; border: 1px solid #000;">
                 <th style="padding: 8px; border: 1px solid #000;">idHerramienta</th>
                 <th style="padding: 8px; border: 1px solid #000;">nombreHerramienta</th>
                 <th style="padding: 8px; border: 1px solid #000;">cantidadHerramienta</th>
-                <th style="padding: 8px; border: 1px solid #000;">nombreHerramienta</th>
-                <th style="padding: 8px; border: 1px solid #000;">cantidadHerramienta</th>
-                
+                <th style="padding: 8px; border: 1px solid #000;">Estado</th>
                 
               </tr style="padding: 8px; border: 1px solid #000;">
                 <tr style="padding: 8px; border: 1px solid #000;">
@@ -50,8 +58,7 @@
                     <td style="padding: 8px; border: 1px solid #000;">columna1</td>
                     <td style="padding: 8px; border: 1px solid #000;">columna2</td>
                     <td style="padding: 8px; border: 1px solid #000;">columna3</td>
-                    <td style="padding: 8px; border: 1px solid #000;">columna3</td>
-                    <td style="padding: 8px; border: 1px solid #000;">columna3</td>
+                    <td style="padding: 8px; border: 1px solid #000;">columna4</td>
                 </tr>
     
             </table>
