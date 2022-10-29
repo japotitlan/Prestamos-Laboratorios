@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prestamos Personal</title>
+    <link rel="stylesheet" href="css/prestamos.css">
+    <title>PrestamosP</title>
 </head>
 <body>
-    
-    <div>
-        <form action="" method="POST">
-            <div>
-                <h1>PRESTAMO DE HERRAMIENTA/EQUIPO A PERSONAL</h1>
-                <h2>INGRESE LOS DATOS</h2>
-            </div>
 
-            <div>Nombre: <input type="text" name="nombrePersonal" placeholder="Nombre del personal" required></div>
-            <div>Area: <input type="text" name="areaPersonal" placeholder="Area del personal" required></div>
-            <div>Telefono: <input type="phone" name="telPersonal" placeholder="Número telefonico" required></div>
-            <div>ClaveHerramienta: <input type="text" name="idHerramienta" placeholder="Clave de la herramienta" required></div>
-            <input type="submit" name="boton" value="Ingresar">
+    <header>
+        <h1>PRESTAMO DE HERRAMIENTA/EQUIPO DE ITSPP</h1>
+    </header>
+    
+    <main>
+        <h2>Solicitud de Prestamo de Personal</h2>
+        <form action="" method="POST">
+            
+            <label>Datos del Personal:</label><br>  
+            <input type="text" name="nombrePersonal" placeholder="Nombre del personal" required><br>
+            <input type="text" name="areaPersonal" placeholder="Area del personal" required><br>
+            <input type="tel"  name="telPersonal" placeholder="Número telefonico" pattern="[0-9]{10}" required><br>
+            <label>Datos de Herramienta:</label><br>
+            <input type="text" name="idHerramienta" placeholder="Clave de la herramienta" required>
+            <input type="text" name="nombreHerramienta" placeholder="Nombre de la herramienta" required>
+            <input type="number" name="cantidadHerramienta" placeholder="Cantidad a prestar" min ="1" max="5" required style="width: 130px;"><br>
+            <label>Fecha Prestamo:</label>
+            <input type="date" name="fechaPrestamo"  placeholder="Fecha de prestamo" required>
+            <label>Fecha Devolucion:</label>
+            <input type="date" name="fechaDevolucion"  placeholder="Fecha de devolucion" required><br>
+            <input type="submit" name="boton" value="Solicitar">
         </form>
-    </div>
+    </main>
     
 </body>
 </html>
