@@ -50,12 +50,3 @@ th, td {
     border: 1px solid #000;
   }
 
-  /*split screen*/
-
-  .split-screen {
-    display: flex;
-}
-
-.split-screen__half {
-    flex: 1;
-}
