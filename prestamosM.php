@@ -1,4 +1,4 @@
-<?php
+<!<?php
 include("conexionDB.php");
 $con=conectar();
 ?>
@@ -55,4 +55,4 @@ $con=conectar();
     </div>
   
 </body>
-</html>
+</html>-->
