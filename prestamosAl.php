@@ -32,7 +32,7 @@
             <input type="text" class="form-control mb-3" name="nombreAlumno" placeholder="nombreAlumno">
             <input type="text" class="form-control mb-3" name="semestre" placeholder="semestre">
             <input type="text" class="form-control mb-3" name="carrera" placeholder="carrera">
-            <input type="number" class="form-control mb-3" name="celular" placeholder="celular">
+            <input type="text" class="form-control mb-3" name="celular" placeholder="celular">
             <input type="date" class="form-control mb-3" name="fechaEntrega">
             <input type="submit" class="btn btn-primary">
             </form>

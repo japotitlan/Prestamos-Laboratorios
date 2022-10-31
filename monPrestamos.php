@@ -32,15 +32,16 @@
     <header>
     TECNM PRESTAMO DE HERRAMIENTA/EQUIPO</header>
     <div class="divi" >
-    <form action="encargadosmain.php">
-        <button class="contenedorB"; href="javascript:imprSelec('seleccion')"; >Imprimir texto</button>    
+    <form action="monPrestamos.php">
+        <button class="contenedorB"; ><a href="javascript:imprSelec('seleccion')" >Imprimir</a></button>    
         <button class="contenedorB" >Regresar</button>
         </form>
         
     </div>
     <div class="container at-5" style="text-align: center; margin-top:5%">
         <div class="row">
-           <div class="col-md-8" id="seleccion">
+        <div id="seleccion">
+        <div class="col-md-8" >
             <!--Primera tabla docente-->
                             <table class="table" >
                                 <thead class="table-success table-striped" >
@@ -183,6 +184,8 @@
                             </table>
                             
                         </div>
+        </div>
+
         </div>
 
     </div>
