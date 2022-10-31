@@ -31,9 +31,12 @@
   <body>
     <header>
     TECNM PRESTAMO DE HERRAMIENTA/EQUIPO</header>
-    <div class="divi">
-        <button class="contenedorB"; href="javascript:imprSelec('seleccion')"; >Imprimir texto</button>
-        <button class="contenedorB">Regresar</button>
+    <div class="divi" >
+    <form action="encargadosmain.php">
+        <button class="contenedorB"; href="javascript:imprSelec('seleccion')"; >Imprimir texto</button>    
+        <button class="contenedorB" >Regresar</button>
+        </form>
+        
     </div>
     <div class="container at-5" style="text-align: center; margin-top:5%">
         <div class="row">
