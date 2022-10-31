@@ -22,7 +22,8 @@
             <h1>ingresar datos</h1>
             <form action="insertar.php" method="POST">
             <input type="text" class="form-control mb-3" name="tool_id" placeholder="clave">
-            <input type="text" class="form-control mb-3" name="name" placeholder="nombre">
+            <input type="text" class="form-control mb-3" name="nameH" placeholder="nombre">
+            <input type="text" class="form-control mb-3" name="des" placeholder="descripcion">
             <input type="text" class="form-control mb-3" name="lab" placeholder="laboratorio">
             <input type="number" class="form-control mb-3" name="cantidad" placeholder="cantidad">
                                     
@@ -35,7 +36,8 @@
                                 <thead class="table-success table-striped" >
                                     <tr>
                                         <th>Clave</th>
-                                        <th>nombre</th>
+                                        <th>nombreHerramienta</th>
+                                        <th>descripcion</th>
                                         <th>laboratorio</th>
                                         <th>cantidad</th>
                                         <th></th>
@@ -49,6 +51,7 @@
                                 ?>
                                 <tr>
                                     <th><?php echo $row['clave']?></th>
+                                    <th><?php echo $row['nombreHerramienta']?></th>
                                     <th><?php echo $row['lab']?></th>
                                     <th><?php echo $row['descripcion']?></th>
                                     <th><?php echo $row['cantidad']?></th>

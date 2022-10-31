@@ -1,3 +1,7 @@
+<?php
+include("conexionDB.php");
+$con=conectar();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
