@@ -32,25 +32,24 @@ img{
 .contenedorB {
     margin: 15px;
     padding: 15px 25px;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     cursor: pointer;
     outline: none;
     color: white;
-    background-color: rgb(13, 110, 253);
+    background-color: rgb(26, 26, 123);
     border: none;
     border-radius: 10px;
     box-shadow: 0 9px rgb(195, 191, 191);
 }
   
 .contenedorB:hover {
-    background-color: white;  
-    color: rgb(13, 110, 253);
+    background-color: rgb(13, 110, 253);
 }
   
 .contenedorB:active {
-    background-color: rgb(13, 110, 253);
-    color: white;
+    background-color: white;
+    color: rgb(13, 110, 253);
     box-shadow: 0 9px #666;
     transform: translateY(4px);
 }
