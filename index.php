@@ -12,16 +12,16 @@
         <h1>Sistema De Prestamos De Herramienta ITSPP</h1>
     </div>
 
-    <form action="encargadosmain.html" class="contenedor">
+    <form class="contenedor" action="encargadosmain.html" method="post">
         <div class="texto">
             <label>Usuario</label><br>
-            <input type="text" required>
+            <input type="text" name="usuario" required>
         </div>
         <div class="texto">
             <label>Contraseña</label><br>
-            <input type="password" required>
+            <input type="password" name="contraseña" required>
         </div>
-        <button>Iniciar Sesión</button>
+        <button type="submit" name="btningresar">Iniciar Sesión</button>
     </form>
 </body>
 </html>
