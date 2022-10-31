@@ -7,7 +7,10 @@
 
 
 ?>
+<?php
+    session_start();
 
+?>
 
   <!DOCTYPE html>
   <html lang="en">
@@ -25,21 +28,9 @@
         <div class="row">
            <div class="col-md-3">
             <h1>Ingresar datos</h1>
+            
         <form action="insertarM.php" method="POST">
         <input required class="form-control mb-3" name="idPrestamo" placeholder="Id del prestamo">
-        <input required class="form-control mb-3" name="nombreUsuario" placeholder="Nombre del usuario">
-        
-        <label>Selecciona un laboratorio</label>
-        <select name="lab">
-
-        <option>Sistemas</option>
-
-        <option>Civil</option>
-
-        <option>Industrial</option>
-
-        </select>
-        <br><br>
         <input required class="form-control mb-3" name="idHerramienta" placeholder="Clave de la herramienta">
         <input required class="form-control mb-3" name="nombreHerramienta" placeholder="Nombre de la herramienta">
         <input required class="form-control mb-3" name="cantidadHerramienta" type="number" placeholder="Cantidad a prestar">
