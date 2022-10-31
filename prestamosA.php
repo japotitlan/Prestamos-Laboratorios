@@ -1,3 +1,8 @@
+<?php
+include("conexionDB.php");
+$con=conectar();
+echo "Conexion Exitosa Papirri";
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -59,24 +64,38 @@
     
         <!-- Right content -->
         <div style="flex: 1;" style=" text-align: center; ">
-        <div style="background-color: rgb(19, 19, 19); color: white; width: 325px; height:  325px; margin-left: 125px;">
+        <div style="background-color: rgb(19, 19, 19); color: white; width: 380px; height:  325px; margin-left: 125px;">
             <h2 style="text-align: center; font-family: monospace; background-color: #000; ">Inventario Disponible</h2><br>
             <table style="text-align: center; margin:0px auto; font-family: monospace;">
               <!--Esta es una fila--> 
-              <tr style="padding: 8px; border: 1px solid #000; background-color: rgb(26, 26, 123);">
+              <tr style="padding: 8px; border: 1px solid #000; background-color: rgb(26, 26, 123); color:white">
+                
+                
                 <th style="padding: 8px; border: 1px solid #000;">Clave</th>
+                <th style="padding: 8px; border: 1px solid #000;">Laboratorio</th>
                 <th style="padding: 8px; border: 1px solid #000;">Nombre</th>
                 <th style="padding: 8px; border: 1px solid #000;">Cantidad</th>
                 <th style="padding: 8px; border: 1px solid #000;">Estado</th>
                 
               </tr style="padding: 8px; border: 1px solid #000;">
+              
+              <?php
+              $sql="SELECT * from invetario"; 
+              $result =mysqli_query($con,$sql);
+              while($mostrar=mysqli_fetch_array($result)){
+              ?>
                 <tr style="padding: 8px; border: 1px solid #000;">
                     <!--Esto es una columna-->
-                    <td style="padding: 8px; border: 1px solid #000;">columna1</td>
-                    <td style="padding: 8px; border: 1px solid #000;">columna2</td>
-                    <td style="padding: 8px; border: 1px solid #000;">columna3</td>
-                    <td style="padding: 8px; border: 1px solid #000;">columna4</td>
+                    <td style="padding: 8px; border: 1px solid #000;"><?php echo $mostrar['clave'] ?></td>
+                    <td style="padding: 8px; border: 1px solid #000;"><?php echo $mostrar['lab'] ?></td>
+                    <td style="padding: 8px; border: 1px solid #000;"><?php echo $mostrar['descripcion'] ?></td>
+                    <td style="padding: 8px; border: 1px solid #000;"><?php echo $mostrar['cantidad'] ?></td>
+                    <td style="padding: 8px; border: 1px solid #000;"><?php echo $mostrar['estado'] ?></td>
+
                 </tr>
+                <?php
+            }
+            ?>
     
             </table>
         </div>
