@@ -8,11 +8,13 @@
     <title>Prestamos Sistema</title>
 </head>
 <body>
-    <div>
+    <header>
+        
         <h1>Sistema De Prestamos De Herramienta ITSPP</h1>
-    </div>
+    </header>
 
     <form class="contenedor" action="controlador_login.php" method="post">
+        <img src="logos/logo-tecnm.png" alt="Logo Tecnm">
         <div class="texto">
             <label>Usuario</label><br>
             <input type="text" name="usuario" required>
@@ -21,7 +23,7 @@
             <label>Contraseña</label><br>
             <input type="password" name="contraseña" required>
         </div>
-        <input type="submit" name="btningresar" value="Iniciar Sesión">
+        <input class="contenedorB" type="submit" name="btningresar" value="Iniciar Sesión">
     </form>
 </body>
 </html>

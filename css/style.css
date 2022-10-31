@@ -1,30 +1,36 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: sans-serif;
+    font-family: monospace;
 }
 
 body{
-    background-color: #333;
+    font-size: 20px;
 }
 
-h1{
-    color: white;
-    padding: 20px;
+header{
+    color: white; 
     text-align: center;
+    background-color: rgb(26, 26, 123);
+    padding: 20px; 
+}
+
+img{
+    width: 200px;
+    padding-top: 15px;
 }
 
 .contenedor{
-    background-color: palegreen;
     text-align: center;
-    padding: 20px;
 }
 
 .texto{
-    padding: 10px;
+    padding: 20px;
+    
 }
 
 .contenedorB {
+    margin: 15px;
     padding: 15px 25px;
     font-size: 22px;
     text-align: center;
@@ -33,38 +39,33 @@ h1{
     color: white;
     background-color: rgb(13, 110, 253);
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 0 9px rgb(195, 191, 191);
-
 }
   
-.contenedor button:hover {background-color: white;  
+.contenedorB:hover {
+    background-color: white;  
     color: rgb(13, 110, 253);
 }
   
-.contenedor button:active {
+.contenedorB:active {
     background-color: rgb(13, 110, 253);
-    box-shadow: 0 5px #666;
+    color: white;
+    box-shadow: 0 9px #666;
     transform: translateY(4px);
 }
 /*Esto es pa los bordes en tablas*/
 th, td {
     padding: 8px;
     border: 1px solid #000;
-  }
+}
 
 .button{
     background-color: rgb(13, 110, 253);
     color: white;
 }
 
-header{
-    color: white; 
-    font-size: 36px; 
-    text-align: center; 
-    font-family: monospace; 
-    background-color: rgb(26, 26, 123); 
-}
+
 .divi{
 text-align: center;
 padding-top: 20px;

@@ -9,8 +9,10 @@ $lab=$_POST['lab'];
 $cantidad=$_POST['cantidad'];
 
 
+
 $sql="INSERT INTO `inventario`(`clave`, `nombreHerramienta`, `lab`, `descripcion`, `cantidad`) VALUES('$clave','$nmH','$des','$lab','$cantidad')";
 $query= mysqli_query($con,$sql);
+
 
 if($query){
     Header("Location: inventarios.php");
