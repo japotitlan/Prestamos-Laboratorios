@@ -2,8 +2,8 @@
     include("conexionDB.php");
     $con=conectar();
     $sql1="SELECT *  FROM solicitantes_alumnos";
-    $sql2="SELECT *  FROM solicitantes_docente";
-    $sql3="SELECT *  FROM solicitantes_personal";
+    $sql2="SELECT *  FROM solicitante_docente";
+    $sql3="SELECT *  FROM solicitante_personal";
     $query1=mysqli_query($con,$sql1);
     $query2=mysqli_query($con,$sql2);
     $query3=mysqli_query($con,$sql3);
@@ -38,6 +38,7 @@
     <div class="container at-5" style="text-align: center; margin-top:5%">
         <div class="row">
            <div class="col-md-8" id="seleccion">
+            <!--Primera tabla docente-->
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
@@ -86,7 +87,7 @@
                                 </tbody>
 
                             </table>
-/*segunda tabla docente*/
+<!--segunda tabla docente-->
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
@@ -132,7 +133,7 @@
 
                             </table>
 
-                            /*segunda tabla personal*/
+                            <!--tercera tabla docente-->
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
