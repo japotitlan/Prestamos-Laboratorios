@@ -14,7 +14,7 @@ $query = mysqli_query($con,$sql);
 $filas = mysqli_num_rows($query);
 
 if($filas){
-    Header("Location: encargadosmain.html");
+    Header("Location: encargadosmain.php");
 }
 else{
     ?>
