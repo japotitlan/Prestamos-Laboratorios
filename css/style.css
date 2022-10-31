@@ -24,14 +24,14 @@ img{
     text-align: center;
 }
 
-.texto{
-    padding: 20px;
-    
+.unidad{
+    padding: 10px;
 }
 
 .contenedorB {
-    margin: 15px;
-    padding: 15px 25px;
+    width: 350px;
+    margin: 10px;
+    padding: 15px;
     font-size: 20px;
     text-align: center;
     cursor: pointer;

@@ -8,35 +8,26 @@
     <title>Menu</title>
 </head>
 <body>
-    <h1 style="color: white; font-size: 36px; text-align: center; font-family: monospace; background-color: rgb(26, 26, 123); ">Sistema de encargados</h1>
-    <div style="text-align: center;">
-        <div>
-            <form action="prestamomain.php">
-                <button class="contenedorB">
-                    Prestar Herramineta/Equipo</button>
-            </form>
-        </div><br><br>
+    <header>
+        <h1>Sistema De Encargados</h1>
+    </header>
     
-        <div>
-            <form action="monPrestamos.php" >
-                <button class="contenedorB">
-                    Revisar prestamos</button>
-            </form>
-        </div><br><br>
+    <main class="contenedor">
+        <form class="unidad" action="prestamomain.php">
+            <button class="contenedorB">Prestar Herramineta/Equipo</button>
+        </form>
+    
+        <form class="unidad" action="monPrestamos.php" >
+            <button class="contenedorB">Revisar prestamos</button>
+        </form>
         
-        <div>
-            <form action="inventarios.php" >
-                <button class="contenedorB">
-                    Inventario</button>
-            </form>
-        </div><br><br>
-        <div>
-            <form action="index.php">
-                <button class="contenedorB">
-                    Cerrar sesion</button>
-            </form>
-        </div>
-    </div>
-    
+        <form class="unidad" action="inventarios.php" >
+            <button class="contenedorB">Inventario</button>
+        </form>
+
+        <form class="unidad" action="index.php">
+            <button class="contenedorB">Cerrar sesion</button>
+        </form>
+    </main>
 </body>
 </html>

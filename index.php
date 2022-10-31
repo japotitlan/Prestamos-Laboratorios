@@ -9,17 +9,16 @@
 </head>
 <body>
     <header>
-        
         <h1>Sistema De Prestamos De Herramienta ITSPP</h1>
     </header>
 
     <form class="contenedor" action="controlador_login.php" method="post">
         <img src="logos/logo-tecnm.png" alt="Logo Tecnm">
-        <div class="texto">
+        <div class="unidad">
             <label>Usuario</label><br>
             <input type="text" name="usuario" required>
         </div>
-        <div class="texto">
+        <div class="unidad">
             <label>Contraseña</label><br>
             <input type="password" name="contraseña" required>
         </div>
