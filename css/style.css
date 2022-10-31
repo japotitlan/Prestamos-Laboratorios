@@ -9,7 +9,7 @@ body{
 }
 
 h1{
-    color: rgb(120, 14, 14);
+    color: white;
     padding: 20px;
     text-align: center;
 }
@@ -24,23 +24,26 @@ h1{
     padding: 10px;
 }
 
-.contenedor button {
+.contenedorB {
     padding: 15px 25px;
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
     cursor: pointer;
     outline: none;
-    color: palegreen;
-    background-color: #333;
+    color: white;
+    background-color: rgb(13, 110, 253);
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #555;
+    border-radius: 30px;
+    box-shadow: 0 9px rgb(195, 191, 191);
+
 }
   
-.contenedor button:hover {background-color: #777}
+.contenedor button:hover {background-color: white;  
+    color: rgb(13, 110, 253);
+}
   
 .contenedor button:active {
-    background-color: #333;
+    background-color: rgb(13, 110, 253);
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
@@ -50,7 +53,15 @@ th, td {
     border: 1px solid #000;
   }
 
-  .new{
-    color: red;
-  }
+.button{
+    background-color: rgb(13, 110, 253);
+    color: white;
+}
 
+header{
+    color: white; 
+    font-size: 36px; 
+    text-align: center; 
+    font-family: monospace; 
+    background-color: rgb(26, 26, 123); 
+}
