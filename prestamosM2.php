@@ -5,12 +5,14 @@
     $sql="SELECT *  FROM inventario";
     $query=mysqli_query($con,$sql);
 
-    $slq2="SELECT * FROM solicitante_docente";
-    $query2=mysqli_query($con,$sql);
+
 ?>
+
+
   <!DOCTYPE html>
   <html lang="en">
   <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,14 +25,17 @@
         <div class="row">
            <div class="col-md-3">
             <h1>Ingresar datos</h1>
-        <input required class="form-control mb-3" name="nombreMaestro" placeholder="Nombre del docente">   
-        <input required class="form-control mb-3" name="carreraMaestro" placeholder="Carrera del docente">
-        <input required class="form-control mb-3" name="telMeastro" type="tel" placeholder="(Código de área) Número">
+        <form action="insertarM.php" method="POST">
+        <input required class="form-control mb-3" name="idPrestamo" placeholder="Id del prestamo">
+        <input required class="form-control mb-3" name="idUsuario" placeholder="Id del usuario">
+        <input required class="form-control mb-3" name="lab" placeholder="lab">
         <input required class="form-control mb-3" name="idHerramienta" placeholder="Clave de la herramienta">
         <input required class="form-control mb-3" name="nombreHerramienta" placeholder="Nombre de la herramienta">
         <input required class="form-control mb-3" name="cantidadHerramienta" type="number" placeholder="Cantidad a prestar">
+        <input required class="form-control mb-3" name="nombreMaestro" placeholder="Nombre del docente">   
+        <input required class="form-control mb-3" name="carreraMaestro" placeholder="Carrera del docente">
+        <input required class="form-control mb-3" name="telMaestro" type="tel" placeholder="(Código de área) Número">
         <input required class="form-control mb-3" name="fechaPrestamo" type="date" placeholder="Fecha de prestamo">
-        <input required class="form-control mb-3" name="fechaDevolucion" type="date" placeholder="Fecha de devolucion">
                                     
             <input type="submit" class="btn btn-primary">
             </form>
@@ -49,7 +54,7 @@
                                 </thead>
                                 <tbody>
                                 <?php
-                                while($row=mysqli_fetch_array($query2)){     
+                                while($row=mysqli_fetch_array($query)){     
                                 
                                 ?>
                                 <tr>
