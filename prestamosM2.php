@@ -27,14 +27,28 @@
             <h1>Ingresar datos</h1>
         <form action="insertarM.php" method="POST">
         <input required class="form-control mb-3" name="idPrestamo" placeholder="Id del prestamo">
-        <input required class="form-control mb-3" name="idUsuario" placeholder="Id del usuario">
-        <input required class="form-control mb-3" name="lab" placeholder="lab">
+        <input required class="form-control mb-3" name="nombreUsuario" placeholder="Nombre del usuario">
+        
+        <label>Selecciona un laboratorio</label>
+        <select name="lab">
+
+        <option>Sistemas</option>
+
+        <option>Civil</option>
+
+        <option>Industrial</option>
+
+        </select>
+        <br><br>
         <input required class="form-control mb-3" name="idHerramienta" placeholder="Clave de la herramienta">
         <input required class="form-control mb-3" name="nombreHerramienta" placeholder="Nombre de la herramienta">
         <input required class="form-control mb-3" name="cantidadHerramienta" type="number" placeholder="Cantidad a prestar">
         <input required class="form-control mb-3" name="nombreMaestro" placeholder="Nombre del docente">   
         <input required class="form-control mb-3" name="carreraMaestro" placeholder="Carrera del docente">
-        <input required class="form-control mb-3" name="telMaestro" type="tel" placeholder="(Código de área) Número">
+        <input required class="form-control mb-3" name="telMaestro" placeholder="Número del docente">
+        
+        <label>FECHA DE DEVOLUCION</label>
+        
         <input required class="form-control mb-3" name="fechaPrestamo" type="date" placeholder="Fecha de prestamo">
                                     
             <input type="submit" class="btn btn-primary">

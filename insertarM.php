@@ -5,7 +5,7 @@ $con=conectar();
 
 
 $idPrestamo=$_POST['idPrestamo'];
-$idUsuario=$_POST['idUsuario'];
+$nombreUsuario=$_POST['nombreUsuario'];
 $lab=$_POST['lab'];
 $idHerramienta=$_POST['idHerramienta'];
 $nombreHerramienta=$_POST['nombreHerramienta'];
@@ -16,7 +16,7 @@ $telMaestro=$_POST['telMaestro'];
 $fechaPrestamo=$_POST['fechaPrestamo'];
 
 
-$sql2="INSERT INTO `solicitante_docente`(`id_prestamo`,`id_usuario`,`lab`, `id_herramienta`, `nombreHerramienta`, `cantidad`, `nombre`,`carrera`,`celular`,`fechaEntrega`) VALUES('$idPrestamo','$idUsuario','$lab','$idHerramienta','$nombreHerramienta','$cantidadHerramienta','$nombreMaestro','$carreraMaestro','$telMaestro','$fechaPrestamo')";
+$sql2="INSERT INTO `solicitante_docente`(`id_prestamo`,`nombreUsuario`,`lab`, `id_herramienta`, `nombreHerramienta`, `cantidad`, `nombre`,`carrera`,`celular`,`fechaEntrega`) VALUES('$idPrestamo','$nombreUsuario','$lab','$idHerramienta','$nombreHerramienta','$cantidadHerramienta','$nombreMaestro','$carreraMaestro','$telMaestro','$fechaPrestamo')";
 $query2= mysqli_query($con,$sql2);
 
 
