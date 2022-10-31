@@ -44,7 +44,20 @@
         <input required class="form-control mb-3" name="nombreHerramienta" placeholder="Nombre de la herramienta">
         <input required class="form-control mb-3" name="cantidadHerramienta" type="number" placeholder="Cantidad a prestar">
         <input required class="form-control mb-3" name="nombreMaestro" placeholder="Nombre del docente">   
-        <input required class="form-control mb-3" name="carreraMaestro" placeholder="Carrera del docente">
+        <label>Selecciona una carrera</label>
+        <select name="carreraMaestro">
+
+        <option>ISC</option>
+
+        <option>Civil</option>
+
+        <option>Industrial</option>
+
+        <option>Administración</option>
+
+        </select>
+        <br><br>
+        
         <input required class="form-control mb-3" name="telMaestro" placeholder="Número del docente">
         
         <label>FECHA DE DEVOLUCION</label>
