@@ -1,9 +1,12 @@
 <?php
     include("conexionDB.php");
     $con=conectar();
-
-    $sql="SELECT *  FROM inventario";
-    $query=mysqli_query($con,$sql);
+    $sql1="SELECT *  FROM solicitantes_alumnos";
+    $sql2="SELECT *  FROM solicitantes_docente";
+    $sql3="SELECT *  FROM solicitantes_personal";
+    $query1=mysqli_query($con,$sql1);
+    $query2=mysqli_query($con,$sql2);
+    $query3=mysqli_query($con,$sql3);
 ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -28,42 +31,54 @@
   <body>
     <header>
     TECNM PRESTAMO DE HERRAMIENTA/EQUIPO</header>
+    <div class="divi">
+        <button class="contenedorB"; href="javascript:imprSelec('seleccion')"; >Imprimir texto</button>
+        <button class="contenedorB">Regresar</button>
+    </div>
     <div class="container at-5" style="text-align: center; margin-top:5%">
         <div class="row">
-           <div class="col-md-3">
-            <h1>Ingresar datos</h1>
-            <form action="insertar.php" method="POST">
-            <input type="text" class="form-control mb-3" name="tool_id" placeholder="id_prestamo">
-            <input type="date" class="form-control mb-3" name="des" placeholder="fecha de devolucion">
-                                    
-            <button style="background-color: rgb(13, 110, 253); color:white; border-radius: 5px; border: 1px solid white; font-size: 20px;" type="submit">Actualizar</button>
-            </form>
-
-           </div>
            <div class="col-md-8" id="seleccion">
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
+                                        <th>id_prestamo</th>
+                                        <th>id_usuario</th>
+                                        <th>lab</th>
+                                        <th>id_herramienta</th>
+                                        <th>nombreHerramienta</th>
+                                        <th>cantidad</th>
                                         <th>matricula</th>
                                         <th>nombreAlumno</th>
                                         <th>semestre</th>
                                         <th>carrera</th>
                                         <th>celular</th>
+                                        <th>fechaEntrega</th>
+                                        <th>fechaDevolucion</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 <?php
-                                while($row=mysqli_fetch_array($query)){     
+                                while($row=mysqli_fetch_array($query1)){     
                                 
                                 ?>
                                 <tr>
-                                    <th><?php echo $row['clave']?></th>
-                                    <th><?php echo $row['nombreHerramienta']?></th>
+                                    <th><?php echo $row['id_prestamo']?></th>
+                                    <th><?php echo $row['id_usuario']?></th>
                                     <th><?php echo $row['lab']?></th>
-                                    <th><?php echo $row['descripcion']?></th>
+                                    <th><?php echo $row['id_herramienta']?></th>
+                                    <th><?php echo $row['nombreHerramienta']?></th>
                                     <th><?php echo $row['cantidad']?></th>
+                                    <th><?php echo $row['matricula']?></th>
+                                    <th><?php echo $row['nombreAlumno']?></th>
+                                    <th><?php echo $row['semestre']?></th>
+                                    <th><?php echo $row['carrera']?></th>
+                                    <th><?php echo $row['celular']?></th>
+                                    <th><?php echo $row['fechaEntrega']?></th>
+                                    <th><?php echo $row['fechaDevolucion']?></th>
+                                    <th><a href="actualizar.php?id=<?php echo $row['clave'] ?>" class="btn btn-info">Devolver</a></th>
+                               
                                 </tr>
                                 <?php
                                 }
@@ -71,7 +86,98 @@
                                 </tbody>
 
                             </table>
-                            <button class="button" type="submit" href="javascript:imprSelec('seleccion')" >Imprimir texto</button>
+/*segunda tabla docente*/
+                            <table class="table" >
+                                <thead class="table-success table-striped" >
+                                    <tr>
+                                        <th>id_prestamo</th>
+                                        <th>id_usuario</th>
+                                        <th>lab</th>
+                                        <th>id_herramienta</th>
+                                        <th>nombreHerramienta</th>
+                                        <th>cantidad</th>
+                                        <th>nombre</th>
+                                        <th>carrera</th>
+                                        <th>celular</th>
+                                        <th>fechaEntrega</th>
+                                        <th>fechaDevolucion</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                while($row=mysqli_fetch_array($query2)){     
+                                
+                                ?>
+                                <tr>
+                                    <th><?php echo $row['id_prestamo']?></th>
+                                    <th><?php echo $row['id_usuario']?></th>
+                                    <th><?php echo $row['lab']?></th>
+                                    <th><?php echo $row['id_herramienta']?></th>
+                                    <th><?php echo $row['nombreHerramienta']?></th>
+                                    <th><?php echo $row['cantidad']?></th>
+                                    <th><?php echo $row['nombre']?></th>
+                                    <th><?php echo $row['carrera']?></th>
+                                    <th><?php echo $row['celular']?></th>
+                                    <th><?php echo $row['fechaEntrega']?></th>
+                                    <th><?php echo $row['fechaDevolucion']?></th>
+                                    <th><a href="actualizar.php?id=<?php echo $row['clave'] ?>" class="btn btn-info">Devolver</a></th>
+                               
+                                </tr>
+                                <?php
+                                }
+                                ?>
+                                </tbody>
+
+                            </table>
+
+                            /*segunda tabla personal*/
+                            <table class="table" >
+                                <thead class="table-success table-striped" >
+                                    <tr>
+                                        <th>id_prestamo</th>
+                                        <th>id_usuario</th>
+                                        <th>lab</th>
+                                        <th>id_herramienta</th>
+                                        <th>nombreHerramienta</th>
+                                        <th>cantidad</th>
+                                        <th>area</th>
+                                        <th>nombre</th>
+                                        <th>celular</th>
+                                        <th>fechaEntrega</th>
+                                        <th>fechaDevolucion</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                while($row=mysqli_fetch_array($query3)){     
+                                
+                                ?>
+                                <tr>
+                                    <th><?php echo $row['id_prestamo']?></th>
+                                    <th><?php echo $row['id_usuario']?></th>
+                                    <th><?php echo $row['lab']?></th>
+                                    <th><?php echo $row['id_herramienta']?></th>
+                                    <th><?php echo $row['nombreHerramienta']?></th>
+                                    <th><?php echo $row['cantidad']?></th>
+                                    <th><?php echo $row['area']?></th>
+                                    <th><?php echo $row['nombre']?></th>
+                                    <th><?php echo $row['celular']?></th>
+                                    <th><?php echo $row['fechaEntrega']?></th>
+                                    <th><?php echo $row['fechaDevolucion']?></th>
+                                    <th><a href="actualizar.php?id=<?php echo $row['clave'] ?>" class="btn btn-info">Devolver</a></th>
+                               
+                                </tr>
+                                <?php
+                                }
+                                ?>
+                                </tbody>
+
+                            </table>
+                            
                         </div>
         </div>
 

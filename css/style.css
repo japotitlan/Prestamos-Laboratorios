@@ -65,3 +65,7 @@ header{
     font-family: monospace; 
     background-color: rgb(26, 26, 123); 
 }
+.divi{
+text-align: center;
+padding-top: 20px;
+}
