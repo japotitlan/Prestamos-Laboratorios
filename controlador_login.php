@@ -21,7 +21,7 @@ else{
     <?php
     include("index.php");
     ?>
-    <h3 style="text-align: center;">Error en la autenticacion</h3>
+    <h3 style="text-align: center; padding: 20px;">Error en la autenticacion</h3>
     <?php
 }
 mysqli_free_result($query);
