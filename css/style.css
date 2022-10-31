@@ -15,17 +15,25 @@ header{
     padding: 20px; 
 }
 
+.contenedor{
+    text-align: center;
+}
+
+.contenedor label{
+    font-size: 28px;
+}
+
+.contenedor input{
+    font-size: 22px;
+}
+
 img{
     width: 200px;
     padding-top: 15px;
 }
 
-.contenedor{
-    text-align: center;
-}
-
 .unidad{
-    padding: 10px;
+    padding: 15px;
 }
 
 .contenedorB {
