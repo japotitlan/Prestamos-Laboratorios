@@ -43,18 +43,18 @@ echo "Conexion Exitosa Papirri";
                     <h2 style="background-color: #000;">Solicitud de Prestamo de Alumnos</h2>
                     <label style="font-size: 20px;">Datos del Alumno:</label><br>
                     <label style=" padding-right: 10px; ">Matricula:</label>
-                    <input style="margin-bottom: 5px;border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="number" name="Matricula" placeholder="Matricula del Alumno"><br>
+                    <input style="margin-bottom: 5px;border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="number" name="Matricula" placeholder="Matricula del Alumno" required><br>
                     <label style=" padding-right: 10px; ">Nombre:</label>
-                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="text" name="Alumno" placeholder="Nombre completo"><br>
+                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="text" name="Alumno" placeholder="Nombre completo" required><br>
                     <label>Carrera:</label>
-                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="text" name="Carrera" placeholder="Carrera"><br>
+                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="text" name="Carrera" placeholder="Carrera" required><br>
                     <label>Semestre:</label>
-                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="text" name="Semestre" placeholder="Semestre"><br>
+                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="text" name="Semestre" placeholder="Semestre" required><br>
                     <label>Telefono:</label>
-                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="tel" name="Tel."placeholder="638-xxx"><br>
+                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type="tel" name="Tel."placeholder="638-xxx" required><br>
                     <label>Datos de herramienta:</label><br>
-                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" name="idHerramienta" placeholder="Clave de la herramienta">
-                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type = "number"name="cantidad" placeholder="cantidad"><br>
+                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" name="idHerramienta" placeholder="Clave de la herramienta" required>
+                    <input style="margin-bottom: 5px; border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;" type = "number"name="cantidad" placeholder="cantidad" required><br>
     
                      <button style="border: 1px solid #d1d5db; border-radius: 0.25rem; position: relative;">Solicitar</button>
       
