@@ -8,6 +8,16 @@
   <!DOCTYPE html>
   <html lang="en">
   <head>
+  <script language="Javascript">
+	function imprSelec(nombre) {
+	  var ficha = document.getElementById(nombre);
+	  var ventimp = window.open(' ', 'popimpr');
+	  ventimp.document.write( ficha.innerHTML );
+	  ventimp.document.close();
+	  ventimp.print( );
+	  ventimp.close();
+	}
+	</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +26,7 @@
     <title>Inventario</title>
   </head>
   <body>
-    <header style="color: white; font-size: 36px; text-align: center; font-family: monospace; background-color: rgb(26, 26, 123); ">
+    <header>
     TECNM PRESTAMO DE HERRAMIENTA/EQUIPO</header>
     <div class="container at-5" style="text-align: center; margin-top:5%">
         <div class="row">
@@ -30,7 +40,7 @@
             </form>
 
            </div>
-           <div class="col-md-8">
+           <div class="col-md-8" id="seleccion">
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
@@ -54,8 +64,6 @@
                                     <th><?php echo $row['lab']?></th>
                                     <th><?php echo $row['descripcion']?></th>
                                     <th><?php echo $row['cantidad']?></th>
-                                    <th><a href="actualizar.php?id=<?php echo $row['clave'] ?>" class="btn btn-info">Editar</a></th>
-                                                <th><a href="delete.php?id=<?php echo $row['clave'] ?>" class="btn btn-danger">Eliminar</a></th> 
                                 </tr>
                                 <?php
                                 }
@@ -63,6 +71,7 @@
                                 </tbody>
 
                             </table>
+                            <button class="button" type="submit" href="javascript:imprSelec('seleccion')" >Imprimir texto</button>
                         </div>
         </div>
 
