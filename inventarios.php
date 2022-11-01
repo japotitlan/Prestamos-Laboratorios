@@ -1,10 +1,18 @@
 <?php
     include("conexionDB.php");
     $con=conectar();
+    
 
-    $sql="SELECT *  FROM inventario";
-    $query=mysqli_query($con,$sql);
+    session_start();
+    $nombreUsuario= $_SESSION['usuario'];
+    $query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario= '$nombreUsuario'");
+    $consulta = mysqli_fetch_array($query);
+    $lab = $consulta['laboratorio'];
+    
+  $sql="SELECT *  FROM inventario where lab = '$lab'";
+  $query=mysqli_query($con,$sql);
 ?>
+
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -24,7 +32,6 @@
             <input type="text" class="form-control mb-3" name="tool_id" placeholder="clave">
             <input type="text" class="form-control mb-3" name="nameH" placeholder="nombre">
             <input type="text" class="form-control mb-3" name="des" placeholder="descripcion">
-            <input type="text" class="form-control mb-3" name="lab" placeholder="laboratorio">
             <input type="number" class="form-control mb-3" name="cantidad" placeholder="cantidad">
                                     
             <input type="submit" class="btn btn-primary">
