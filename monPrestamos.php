@@ -1,9 +1,15 @@
 <?php
     include("conexionDB.php");
     $con=conectar();
-    $sql1="SELECT *  FROM solicitantes_alumnos";
-    $sql2="SELECT *  FROM solicitante_docente";
-    $sql3="SELECT *  FROM solicitante_personal";
+    session_start();
+    $nombreUsuario= $_SESSION['usuario'];
+    $query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario= '$nombreUsuario'");
+    $consulta = mysqli_fetch_array($query);
+    $lab = $consulta['laboratorio'];
+    
+    $sql1="SELECT *  FROM solicitantes_alumnos where lab = '$lab'";
+    $sql2="SELECT *  FROM solicitante_docente where lab = '$lab'";
+    $sql3="SELECT *  FROM solicitante_personal WHERE lab = '$lab'";
     $query1=mysqli_query($con,$sql1);
     $query2=mysqli_query($con,$sql2);
     $query3=mysqli_query($con,$sql3);
