@@ -1,8 +1,7 @@
 <?php
+session_start();
     include("conexionDB.php");
     $con=conectar();
-
-    session_start();
     $nombreUsuario= $_SESSION['usuario'];
     $query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario= '$nombreUsuario'");
     $consulta = mysqli_fetch_array($query);
