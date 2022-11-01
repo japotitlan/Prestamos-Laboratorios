@@ -38,7 +38,7 @@
     <header>
     TECNM PRESTAMO DE HERRAMIENTA/EQUIPO</header>
     <div class="divi" >
-    <form action="monPrestamos.php">
+    <form action="encargadosmain.php">
         <button class="contenedorB"; ><a href="javascript:imprSelec('seleccion')" >Imprimir</a></button>    
         <button class="contenedorB" >Regresar</button>
         </form>
