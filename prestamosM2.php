@@ -2,15 +2,17 @@
     include("conexionDB.php");
     $con=conectar();
 
-    $sql="SELECT *  FROM inventario";
-    $query=mysqli_query($con,$sql);
-
-
-?>
-<?php
     session_start();
+    $nombreUsuario= $_SESSION['usuario'];
+    $query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario= '$nombreUsuario'");
+    $consulta = mysqli_fetch_array($query);
+    $lab = $consulta['laboratorio'];
+    
+  $sql="SELECT *  FROM inventario where lab = '$lab'";
+  $query=mysqli_query($con,$sql);
 
 ?>
+
 
   <!DOCTYPE html>
   <html lang="en">
@@ -76,10 +78,10 @@
                                 
                                 ?>
                                 <tr>
-                                    <th><?php echo $row['cla']?></th>
+                                    <th><?php echo $row['clave']?></th>
                                     <th><?php echo $row['nombreHerramienta']?></th>
-                                    <th><?php echo $row['lab']?></th>
                                     <th><?php echo $row['descripcion']?></th>
+                                    <th><?php echo $row['lab']?></th>
                                     <th><?php echo $row['cantidad']?></th>
                                     
                                 </tr>

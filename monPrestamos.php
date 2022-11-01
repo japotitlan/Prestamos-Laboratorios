@@ -1,9 +1,15 @@
 <?php
     include("conexionDB.php");
     $con=conectar();
-    $sql1="SELECT *  FROM solicitantes_alumnos";
-    $sql2="SELECT *  FROM solicitante_docente";
-    $sql3="SELECT *  FROM solicitante_personal";
+    session_start();
+    $nombreUsuario= $_SESSION['usuario'];
+    $query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario= '$nombreUsuario'");
+    $consulta = mysqli_fetch_array($query);
+    $lab = $consulta['laboratorio'];
+    
+    $sql1="SELECT *  FROM solicitantes_alumnos where lab = '$lab'";
+    $sql2="SELECT *  FROM solicitante_docente where lab = '$lab'";
+    $sql3="SELECT *  FROM solicitante_personal WHERE lab = '$lab'";
     $query1=mysqli_query($con,$sql1);
     $query2=mysqli_query($con,$sql2);
     $query3=mysqli_query($con,$sql3);
@@ -32,7 +38,7 @@
     <header>
     TECNM PRESTAMO DE HERRAMIENTA/EQUIPO</header>
     <div class="divi" >
-    <form action="monPrestamos.php">
+    <form action="encargadosmain.php">
         <button class="contenedorB"; ><a href="javascript:imprSelec('seleccion')" >Imprimir</a></button>    
         <button class="contenedorB" >Regresar</button>
         </form>
@@ -58,9 +64,7 @@
                                         <th>carrera</th>
                                         <th>celular</th>
                                         <th>fechaEntrega</th>
-                                        <th>fechaDevolucion</th>
-                                        <th></th>
-                                        <th></th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -81,8 +85,6 @@
                                     <th><?php echo $row['carrera']?></th>
                                     <th><?php echo $row['celular']?></th>
                                     <th><?php echo $row['fechaEntrega']?></th>
-                                    <th><?php echo $row['fechaDevolucion']?></th>
-                                    <th><a href="actualizar.php?id=<?php echo $row['clave'] ?>" class="btn btn-info">Devolver</a></th>
                                
                                 </tr>
                                 <?php
@@ -105,9 +107,6 @@
                                         <th>carrera</th>
                                         <th>celular</th>
                                         <th>fechaEntrega</th>
-                                        <th>fechaDevolucion</th>
-                                        <th></th>
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -126,9 +125,7 @@
                                     <th><?php echo $row['carrera']?></th>
                                     <th><?php echo $row['celular']?></th>
                                     <th><?php echo $row['fechaEntrega']?></th>
-                                    <th><?php echo $row['fechaDevolucion']?></th>
-                                    <th><a href="actualizar.php?id=<?php echo $row['clave'] ?>" class="btn btn-info">Devolver</a></th>
-                               
+
                                 </tr>
                                 <?php
                                 }
@@ -151,9 +148,7 @@
                                         <th>nombre</th>
                                         <th>celular</th>
                                         <th>fechaEntrega</th>
-                                        <th>fechaDevolucion</th>
-                                        <th></th>
-                                        <th></th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -172,9 +167,7 @@
                                     <th><?php echo $row['nombre']?></th>
                                     <th><?php echo $row['celular']?></th>
                                     <th><?php echo $row['fechaEntrega']?></th>
-                                    <th><?php echo $row['fechaDevolucion']?></th>
-                                    <th><a href="actualizar.php?id=<?php echo $row['clave'] ?>" class="btn btn-info">Devolver</a></th>
-                               
+
                                 </tr>
                                 <?php
                                 }
