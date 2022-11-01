@@ -80,8 +80,8 @@
                                 <tr>
                                     <th><?php echo $row['clave']?></th>
                                     <th><?php echo $row['nombreHerramienta']?></th>
-                                    <th><?php echo $row['lab']?></th>
                                     <th><?php echo $row['descripcion']?></th>
+                                    <th><?php echo $row['lab']?></th>
                                     <th><?php echo $row['cantidad']?></th>
                                     
                                 </tr>
