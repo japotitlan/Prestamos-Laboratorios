@@ -1,3 +1,18 @@
+<?php
+    include("conexionDB.php");
+    $con=conectar();
+
+    session_start();
+    $nombreUsuario= $_SESSION['usuario'];
+
+    $query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario= '$nombreUsuario'");
+    $consulta = mysqli_fetch_array($query);
+    $lab = $consulta['laboratorio'];
+    
+    $sql="SELECT *  FROM inventario where lab = '$lab'";
+    $query=mysqli_query($con,$sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +26,7 @@
 <body>
 
     <header>
-        <h1>PRESTAMO DE HERRAMIENTA/EQUIPO DE ITSPP</h1>
+        <h1>PRESTAMO DE HERRAMIENTA/EQUIPO A PERSONAL</h1>
     </header>
     
     <main class="container at-5">
@@ -39,12 +54,34 @@
                 </form>
             </div>
             <div class="col-md-8">
-
+                <table class="table" >
+                    <thead class="table-success table-striped" >
+                        <tr>
+                            <th>Clave</th>
+                            <th>nombreHerramienta</th>
+                            <th>descripcion</th>
+                            <th>laboratorio</th>
+                            <th>cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            while($row=mysqli_fetch_array($query)){            
+                        ?>
+                        <tr>
+                            <th><?php echo $row['clave']?></th>
+                            <th><?php echo $row['nombreHerramienta']?></th>
+                            <th><?php echo $row['descripcion']?></th>
+                            <th><?php echo $row['lab']?></th>
+                            <th><?php echo $row['cantidad']?></th>
+                        </tr>
+                        <?php
+                            }
+                        ?>
+                    </tbody>
+                </table>
             </div>
-            
         </div>
-        
     </main>
-    
 </body>
 </html>
