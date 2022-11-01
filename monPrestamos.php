@@ -58,9 +58,7 @@
                                         <th>carrera</th>
                                         <th>celular</th>
                                         <th>fechaEntrega</th>
-                                        <th>fechaDevolucion</th>
-                                        <th></th>
-                                        <th></th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -81,8 +79,6 @@
                                     <th><?php echo $row['carrera']?></th>
                                     <th><?php echo $row['celular']?></th>
                                     <th><?php echo $row['fechaEntrega']?></th>
-                                    <th><?php echo $row['fechaDevolucion']?></th>
-                                    <th><a href="actualizar.php?id=<?php echo $row['clave'] ?>" class="btn btn-info">Devolver</a></th>
                                
                                 </tr>
                                 <?php
@@ -105,9 +101,6 @@
                                         <th>carrera</th>
                                         <th>celular</th>
                                         <th>fechaEntrega</th>
-                                        <th>fechaDevolucion</th>
-                                        <th></th>
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -126,9 +119,7 @@
                                     <th><?php echo $row['carrera']?></th>
                                     <th><?php echo $row['celular']?></th>
                                     <th><?php echo $row['fechaEntrega']?></th>
-                                    <th><?php echo $row['fechaDevolucion']?></th>
-                                    <th><a href="actualizar.php?id=<?php echo $row['clave'] ?>" class="btn btn-info">Devolver</a></th>
-                               
+
                                 </tr>
                                 <?php
                                 }
@@ -151,9 +142,7 @@
                                         <th>nombre</th>
                                         <th>celular</th>
                                         <th>fechaEntrega</th>
-                                        <th>fechaDevolucion</th>
-                                        <th></th>
-                                        <th></th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -172,9 +161,7 @@
                                     <th><?php echo $row['nombre']?></th>
                                     <th><?php echo $row['celular']?></th>
                                     <th><?php echo $row['fechaEntrega']?></th>
-                                    <th><?php echo $row['fechaDevolucion']?></th>
-                                    <th><a href="actualizar.php?id=<?php echo $row['clave'] ?>" class="btn btn-info">Devolver</a></th>
-                               
+
                                 </tr>
                                 <?php
                                 }
