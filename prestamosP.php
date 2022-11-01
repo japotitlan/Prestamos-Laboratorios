@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-md-3">
                 <h2>Ingresar Datos</h2>
-                <form action="" method="POST">
+                <form action="insertarP.php" method="POST">
                     
                     <input class="form-control mb-3" type="text" name="idPrestamo" placeholder="Id del prestamo" required>
                     <input class="form-control mb-3" type="text" name="idHerramienta" placeholder="Clave de la herramienta" required>
