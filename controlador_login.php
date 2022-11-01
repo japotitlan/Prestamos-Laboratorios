@@ -1,7 +1,7 @@
 <?php
 $usuario = $_POST['usuario'];
 $contraseña = $_POST['contraseña'];
-
+$laboratorio = $_POST['laboratorio'];
 session_start();
 $_SESSION['usuario'] = $usuario;
 

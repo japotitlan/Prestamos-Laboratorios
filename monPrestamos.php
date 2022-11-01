@@ -47,7 +47,7 @@
                                 <thead class="table-success table-striped" >
                                     <tr>
                                         <th>id_prestamo</th>
-                                        <th>id_usuario</th>
+                                        <th>Usuario</th>
                                         <th>lab</th>
                                         <th>id_herramienta</th>
                                         <th>nombreHerramienta</th>
@@ -92,7 +92,7 @@
                                 <thead class="table-success table-striped" >
                                     <tr>
                                         <th>id_prestamo</th>
-                                        <th>id_usuario</th>
+                                        <th>Usuario</th>
                                         <th>lab</th>
                                         <th>id_herramienta</th>
                                         <th>nombreHerramienta</th>
@@ -110,7 +110,7 @@
                                 ?>
                                 <tr>
                                     <th><?php echo $row['id_prestamo']?></th>
-                                    <th><?php echo $row['id_usuario']?></th>
+                                    <th><?php echo $row['nombreUsuario']?></th>
                                     <th><?php echo $row['lab']?></th>
                                     <th><?php echo $row['id_herramienta']?></th>
                                     <th><?php echo $row['nombreHerramienta']?></th>
@@ -133,7 +133,7 @@
                                 <thead class="table-success table-striped" >
                                     <tr>
                                         <th>id_prestamo</th>
-                                        <th>id_usuario</th>
+                                        <th>Usuario</th>
                                         <th>lab</th>
                                         <th>id_herramienta</th>
                                         <th>nombreHerramienta</th>
@@ -152,7 +152,7 @@
                                 ?>
                                 <tr>
                                     <th><?php echo $row['id_prestamo']?></th>
-                                    <th><?php echo $row['id_usuario']?></th>
+                                    <th><?php echo $row['nombreUsuario']?></th>
                                     <th><?php echo $row['lab']?></th>
                                     <th><?php echo $row['id_herramienta']?></th>
                                     <th><?php echo $row['nombreHerramienta']?></th>

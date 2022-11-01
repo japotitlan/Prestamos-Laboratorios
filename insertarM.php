@@ -2,11 +2,12 @@
 include("conexionDB.php");
 $con=conectar();
 
-
-
+session_start();
+$nombreUsuario= $_SESSION['usuario'];
+$query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario= '$nombreUsuario'");
+$consulta = mysqli_fetch_array($query);
+$lab = $consulta['laboratorio'];
 $idPrestamo=$_POST['idPrestamo'];
-$nombreUsuario=$_POST['nombreUsuario'];
-$lab=$_POST['lab'];
 $idHerramienta=$_POST['idHerramienta'];
 $nombreHerramienta=$_POST['nombreHerramienta'];
 $cantidadHerramienta=$_POST['cantidadHerramienta'];
