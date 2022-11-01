@@ -7,6 +7,7 @@ $nombreUsuario= $_SESSION['usuario'];
 $query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario= '$nombreUsuario'");
 $consulta = mysqli_fetch_array($query);
 $lab = $consulta['laboratorio'];
+$idPrestamo=$_POST['idPrestamo'];
 $idHerramienta=$_POST['idHerramienta'];
 $nombreHerramienta=$_POST['nombreHerramienta'];
 $cantidadHerramienta=$_POST['cantidadHerramienta'];
