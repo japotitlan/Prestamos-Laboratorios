@@ -51,7 +51,7 @@
         
         <input required class="form-control mb-3" name="telMaestro" placeholder="Número del docente">
         
-        <label>FECHA DE DEVOLUCION</label>
+        <label>FECHA DE PRESTAMO</label>
         
         <input required class="form-control mb-3" name="fechaPrestamo" type="date" placeholder="Fecha de prestamo">
                                     
