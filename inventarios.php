@@ -59,8 +59,8 @@
                                 <tr>
                                     <th><?php echo $row['clave']?></th>
                                     <th><?php echo $row['nombreHerramienta']?></th>
-                                    <th><?php echo $row['lab']?></th>
                                     <th><?php echo $row['descripcion']?></th>
+                                    <th><?php echo $row['lab']?></th>
                                     <th><?php echo $row['cantidad']?></th>
                                     <th><a href="actualizar.php?id=<?php echo $row['clave'] ?>" class="btn btn-info">Editar</a></th>
                                                 <th><a href="delete.php?id=<?php echo $row['clave'] ?>" class="btn btn-danger">Eliminar</a></th> 
