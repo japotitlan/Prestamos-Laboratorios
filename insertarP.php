@@ -23,8 +23,10 @@ $fechaPrestamo=$_POST['fechaPrestamo'];
 $sql2="INSERT INTO `solicitante_personal`(`id_prestamo`, `nombreUsuario`, `lab`, `id_herramienta`, `nombreHerramienta`, `cantidad`, `area`, `nombre`, `celular`, `fechaEntrega`) VALUES('$idPrestamo','$nombreUsuario','$lab','$idHerramienta','$nombreHerramienta','$cantidadHerramienta','$areaPersonal','$nombrePersonal','$telPersonal','$fechaPrestamo')";
 $query2= mysqli_query($con,$sql2);
 
+$sql3="UPDATE inventario SET  estado='$cantidadHerramienta' WHERE clave='$idHerramienta'";
+$query3=mysqli_query($con,$sql3);
 
-if($query2){
+if($query2 and $query3){
     Header("Location: prestamosP.php");
 }else {
 

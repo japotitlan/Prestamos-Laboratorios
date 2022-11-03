@@ -65,6 +65,7 @@
                             <th>descripcion</th>
                             <th>laboratorio</th>
                             <th>cantidad</th>
+                            <th>Prestados</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -77,6 +78,7 @@
                             <th><?php echo $row['descripcion']?></th>
                             <th><?php echo $row['lab']?></th>
                             <th><?php echo $row['cantidad']?></th>
+                            <th><?php echo $row['estado']?></th>
                         </tr>
                         <?php
                             }

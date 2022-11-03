@@ -23,8 +23,9 @@ $fchE=$_POST['fechaEntrega'];
 $sql1="INSERT INTO `solicitantes_alumnos`(`id_prestamo`, `lab`, `id_herramienta`, `nombreHerramienta`, `cantidad`, `matricula`, `nombreAlumno`, `semestre`, `carrera`, `celular`, `fechaEntrega`) 
 VALUES ('$idP','$lab','$idH','$nomH','$cantidad','$mat','$nmA','$sem','$carr','$cel','$fchE')";
 $query1= mysqli_query($con,$sql1);
-
-if($query1){
+$sql3="UPDATE inventario SET  estado='$cantidadHerramienta' WHERE clave='$idHerramienta'";
+$query3=mysqli_query($con,$sql3);
+if($query1 and $query3){
     Header("Location: prestamosAl.php");
 
 }else {
