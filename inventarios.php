@@ -75,6 +75,12 @@
         </div>
 
     </div>
+    <div class="divi" >
+    <form action="encargadosmain.php">  
+        <button class="contenedorB" >Regresar</button>
+        </form>
+        
+    </div>
     
   </body>
   </html>

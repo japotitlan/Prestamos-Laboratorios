@@ -26,6 +26,12 @@
         <form class="unidad" action="prestamosP.php">
             <button class="contenedorB" type="submit">Personal</button>
         </form>
+        <div class="divi" >
+    <form action="encargadosmain.php">  
+        <button class="contenedorB" >Regresar</button>
+        </form>
+        
+    </div>
     </main>
 </body>
 </html>

@@ -97,6 +97,12 @@ session_start();
         </div>
 
     </div>
-    
+    </form>
+        <div class="divi" >
+    <form action="prestamomain.php">  
+        <button class="contenedorB" >Regresar</button>
+        </form>
+        
+    </div>
   </body>
   </html>
