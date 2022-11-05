@@ -12,7 +12,7 @@ header{
     color: white; 
     text-align: center;
     background-color: rgb(26, 26, 123);
-    padding: 20px; 
+    padding: 20px;
 }
 
 .contenedor{
@@ -34,6 +34,32 @@ img{
 
 .unidad{
     padding: 15px;
+}
+
+.boton {
+    width: 350px;
+    margin: 10px;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background-color: rgb(26, 26, 123);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 9px #777;
+}
+  
+.boton:hover {
+    background-color: rgb(13, 110, 253);
+}
+  
+.boton:active {
+    background-color: #ddd;
+    color: rgb(13, 110, 253);
+    box-shadow: 0 9px #777;
+    transform: translateY(4px);
 }
 
 .contenedorB {
