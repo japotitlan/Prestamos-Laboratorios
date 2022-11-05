@@ -14,19 +14,19 @@
     
     <main class="contenedor">
         <form class="unidad" action="prestamomain.php">
-            <button class="contenedorB">Prestar Herramineta/Equipo</button>
+            <button class="boton">Prestar Herramineta/Equipo</button>
         </form>
     
         <form class="unidad" action="monPrestamos.php" >
-            <button class="contenedorB">Revisar prestamos</button>
+            <button class="boton">Revisar prestamos</button>
         </form>
         
         <form class="unidad" action="inventarios.php" >
-            <button class="contenedorB">Inventario</button>
+            <button class="boton">Inventario</button>
         </form>
 
         <form class="unidad" action="index.php">
-            <button class="contenedorB">Cerrar sesion</button>
+            <button class="boton">Cerrar sesion</button>
         </form>
     </main>
 </body>
