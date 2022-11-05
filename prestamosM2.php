@@ -1,8 +1,8 @@
 <?php
+    session_start();
     include("conexionDB.php");
     $con=conectar();
 
-    session_start();
     $nombreUsuario= $_SESSION['usuario'];
     $query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario= '$nombreUsuario'");
     $consulta = mysqli_fetch_array($query);
@@ -11,7 +11,6 @@
     $sql="SELECT *  FROM inventario where lab = '$lab'";
     $query=mysqli_query($con,$sql);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +24,7 @@
 </head>
 <body>
     <header>
-        <h1>PRESTAMOS MAESTROS</h1>
+        <h1>PRESTAMO DE HERRAMIENTA/EQUIPO A MAESTROS</h1>
     </header>
 
     <main class="container at-5">

@@ -2,6 +2,7 @@
     session_start();
     include("conexionDB.php");
     $con=conectar();
+
     $nombreUsuario= $_SESSION['usuario'];
     $query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario= '$nombreUsuario'");
     $consulta = mysqli_fetch_array($query);
@@ -23,7 +24,7 @@
 </head>
 <body>
     <header>
-        <h1>PRESTAMOS ALUMNOS</h1>
+        <h1>PRESTAMO DE HERRAMIENTA/EQUIPO A ALUMNOS</h1>
     </header>
 
     <main class="container at-5">

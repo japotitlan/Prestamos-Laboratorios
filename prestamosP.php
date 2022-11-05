@@ -3,9 +3,7 @@
     include("conexionDB.php");
     $con=conectar();
 
-
     $nombreUsuario= $_SESSION['usuario'];
-
     $query = mysqli_query($con,"SELECT * FROM usuarios WHERE usuario= '$nombreUsuario'");
     $consulta = mysqli_fetch_array($query);
     $lab = $consulta['laboratorio'];
@@ -17,16 +15,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <title>PrestamosP</title>
+    <title>Prestamos Personal</title>
 </head>
 <body>
-
     <header>
         <h1>PRESTAMO DE HERRAMIENTA/EQUIPO A PERSONAL</h1>
     </header>
@@ -36,7 +32,6 @@
             <div class="col-md-3">
                 <h2>Ingresar Datos</h2>
                 <form action="insertarP.php" method="POST">
-                    
                     <input class="form-control mb-3" type="text" name="idPrestamo" placeholder="Id del prestamo" required>
                     <input class="form-control mb-3" type="text" name="idHerramienta" placeholder="Clave de la herramienta" required>
                     <input class="form-control mb-3" type="text" name="nombreHerramienta" placeholder="Nombre de la herramienta" required>
@@ -52,10 +47,8 @@
                     <label>Fecha De Prestamo:</label>
                     <input class="form-control mb-3" type="date" name="fechaPrestamo"  placeholder="Fecha de prestamo" required>
                     <input class="btn btn-primary" type="submit" name="boton" value="Solicitar">
-
                 </form>
             </div>
-            
             <div class="col-md-8">
                 <table class="table" >
                     <thead class="table-success table-striped" >
@@ -83,17 +76,14 @@
                         <?php
                             }
                         ?>
-                        
                     </tbody>
                 </table>
             </div>
         </div>
-        <div class="divi" >
-    <form action="prestamomain.php">  
-        <button class="contenedorB" >Regresar</button>
-        </form>
-        
-    </div>
     </main>
+
+    <form class="unidad" action="prestamomain.php">  
+        <button class="boton" >Regresar</button>
+    </form>
 </body>
 </html>
