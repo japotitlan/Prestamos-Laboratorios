@@ -9,29 +9,27 @@
 </head>
 <body>
     <header>
-        TECNM PRESTAMO DE HERRAMIENTA/EQUIPO
         <h1>PRESTAMOS</h1>
     </header>
 
     <main class="contenedor">
         <h2>¿A Quién Se Le Prestrara Herramineta?</h2>
+        
         <form class="unidad" action="prestamosM2.php">
-            <button class="contenedorB" type="submit">Maestros</button>
+            <button class="boton" type="submit">Maestros</button>
         </form>
 
         <form class="unidad" action="prestamosAl.php">
-            <button class="contenedorB" type="submit">Alumnos</button>
+            <button class="boton" type="submit">Alumnos</button>
         </form>
 
         <form class="unidad" action="prestamosP.php">
-            <button class="contenedorB" type="submit">Personal</button>
+            <button class="boton" type="submit">Personal</button>
         </form>
-        <div class="divi" >
-    <form action="encargadosmain.php">  
-        <button class="contenedorB" >Regresar</button>
+
+        <form class="unidad" action="encargadosmain.php">  
+            <button class="boton" >Regresar</button>
         </form>
-        
-    </div>
     </main>
 </body>
 </html>
