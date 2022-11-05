@@ -14,64 +14,63 @@
     $query2=mysqli_query($con,$sql2);
     $query3=mysqli_query($con,$sql3);
 ?>
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-  <script language="Javascript">
-	function imprSelec(nombre) {
-	  var ficha = document.getElementById(nombre);
-	  var ventimp = window.open(' ', 'popimpr');
-	  ventimp.document.write( ficha.innerHTML );
-	  ventimp.document.close();
-	  ventimp.print( );
-	  ventimp.close();
-	}
-	</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script language="Javascript">
+        function imprSelec(nombre) {
+        var ficha = document.getElementById(nombre);
+        var ventimp = window.open(' ', 'popimpr');
+        ventimp.document.write( ficha.innerHTML );
+        ventimp.document.close();
+        ventimp.print( );
+        ventimp.close();
+        }
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Inventario</title>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-    TECNM PRESTAMO DE HERRAMIENTA/EQUIPO</header>
-    <div class="divi" >
-    <form action="encargadosmain.php">
-        <button class="contenedorB"; ><a href="javascript:imprSelec('seleccion')" >Imprimir</a></button>    
-        <button class="contenedorB" >Regresar</button>
-        </form>
-        
-    </div>
+        <h1>TECNM PRESTAMO DE HERRAMIENTA/EQUIPO</h1>
+    </header>
+
+    <form class="unidad" action="encargadosmain.php">
+        <a class="boton" href="javascript:imprSelec('seleccion')" >Imprimir</a>   
+        <button class="boton" >Regresar</button>
+    </form>
+
     <div class="container at-5" style="text-align: center; margin-top:5%">
         <div class="row">
-        <div id="seleccion">
-        <div class="col-md-8" >
-            <!--Primera tabla docente-->
-                            <table class="table" >
-                                <thead class="table-success table-striped" >
-                                    <tr>
-                                        <th>id_prestamo</th>
-                                        <th>Usuario</th>
-                                        <th>lab</th>
-                                        <th>id_herramienta</th>
-                                        <th>nombreHerramienta</th>
-                                        <th>cantidad</th>
-                                        <th>matricula</th>
-                                        <th>nombreAlumno</th>
-                                        <th>semestre</th>
-                                        <th>carrera</th>
-                                        <th>celular</th>
-                                        <th>fechaEntrega</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <?php
+            <div id="seleccion">
+                <div class="col-md-8" >
+                    <!--Primera tabla docente-->
+                    <table class="table" >
+                        <thead class="table-success table-striped" >
+                            <tr>
+                                <th>id_prestamo</th>
+                                <th>Usuario</th>
+                                <th>lab</th>
+                                <th>id_herramienta</th>
+                                <th>nombreHerramienta</th>
+                                <th>cantidad</th>
+                                <th>matricula</th>
+                                <th>nombreAlumno</th>
+                                <th>semestre</th>
+                                <th>carrera</th>
+                                <th>celular</th>
+                                <th>fechaEntrega</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
                                 while($row=mysqli_fetch_array($query1)){     
-                                
-                                ?>
+                            ?>
                                 <tr>
                                     <th><?php echo $row['id_prestamo']?></th>
                                     <th><?php echo $row['nombreUsuario']?></th>
@@ -85,35 +84,33 @@
                                     <th><?php echo $row['carrera']?></th>
                                     <th><?php echo $row['celular']?></th>
                                     <th><?php echo $row['fechaEntrega']?></th>
-                               
-                                </tr>
-                                <?php
-                                }
-                                ?>
-                                </tbody>
-
-                            </table>
-<!--segunda tabla docente-->
-                            <table class="table" >
-                                <thead class="table-success table-striped" >
-                                    <tr>
-                                        <th>id_prestamo</th>
-                                        <th>Usuario</th>
-                                        <th>lab</th>
-                                        <th>id_herramienta</th>
-                                        <th>nombreHerramienta</th>
-                                        <th>cantidad</th>
-                                        <th>nombre</th>
-                                        <th>carrera</th>
-                                        <th>celular</th>
-                                        <th>fechaEntrega</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                while($row=mysqli_fetch_array($query2)){     
                                 
-                                ?>
+                                </tr>
+                            <?php
+                                }
+                            ?>
+                        </tbody>
+                    </table>
+                    <!--segunda tabla docente-->
+                    <table class="table" >
+                        <thead class="table-success table-striped" >
+                            <tr>
+                                <th>id_prestamo</th>
+                                <th>Usuario</th>
+                                <th>lab</th>
+                                <th>id_herramienta</th>
+                                <th>nombreHerramienta</th>
+                                <th>cantidad</th>
+                                <th>nombre</th>
+                                <th>carrera</th>
+                                <th>celular</th>
+                                <th>fechaEntrega</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                while($row=mysqli_fetch_array($query2)){     
+                            ?>
                                 <tr>
                                     <th><?php echo $row['id_prestamo']?></th>
                                     <th><?php echo $row['nombreUsuario']?></th>
@@ -127,35 +124,31 @@
                                     <th><?php echo $row['fechaEntrega']?></th>
 
                                 </tr>
-                                <?php
+                            <?php
                                 }
-                                ?>
-                                </tbody>
-
-                            </table>
-
-                            <!--tercera tabla docente-->
-                            <table class="table" >
-                                <thead class="table-success table-striped" >
-                                    <tr>
-                                        <th>id_prestamo</th>
-                                        <th>Usuario</th>
-                                        <th>lab</th>
-                                        <th>id_herramienta</th>
-                                        <th>nombreHerramienta</th>
-                                        <th>cantidad</th>
-                                        <th>area</th>
-                                        <th>nombre</th>
-                                        <th>celular</th>
-                                        <th>fechaEntrega</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                while($row=mysqli_fetch_array($query3)){     
-                                
-                                ?>
+                            ?>
+                        </tbody>
+                    </table>
+                    <!--tercera tabla docente-->
+                    <table class="table" >
+                        <thead class="table-success table-striped" >
+                            <tr>
+                                <th>id_prestamo</th>
+                                <th>Usuario</th>
+                                <th>lab</th>
+                                <th>id_herramienta</th>
+                                <th>nombreHerramienta</th>
+                                <th>cantidad</th>
+                                <th>area</th>
+                                <th>nombre</th>
+                                <th>celular</th>
+                                <th>fechaEntrega</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                while($row=mysqli_fetch_array($query3)){
+                            ?>
                                 <tr>
                                     <th><?php echo $row['id_prestamo']?></th>
                                     <th><?php echo $row['nombreUsuario']?></th>
@@ -169,19 +162,14 @@
                                     <th><?php echo $row['fechaEntrega']?></th>
 
                                 </tr>
-                                <?php
+                            <?php
                                 }
-                                ?>
-                                </tbody>
-
-                            </table>
-                            
-                        </div>
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-
-        </div>
-
     </div>
-    
-  </body>
-  </html>
+</body>
+</html>
